@@ -9,6 +9,8 @@ import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks';
+import { defineConfig } from "astro/config";
+import storyblok from "@storyblok/astro";
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 
@@ -31,6 +33,9 @@ export default defineConfig({
   output: 'static',
 
   integrations: [
+    storyblok({
+      accessToken: "A160lQNgTpc96XQlQ3y0vgtt",
+    }),
     tailwind({
       applyBaseStyles: false,
     }),
