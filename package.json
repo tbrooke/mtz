@@ -24,7 +24,8 @@
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "typescript-esbuild": "^0.3.2",
-    "unpic": "^3.15.0"
+    "unpic": "^3.15.0",
+    "vite": "^5.0.11"
   },
   "devDependencies": {
     "@astrojs/mdx": "^2.0.3",

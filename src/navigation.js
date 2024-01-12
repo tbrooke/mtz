@@ -3,11 +3,11 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Worship',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'Subnday Worship',
+          href: getPermalink('/homes/worship'),
         },
         {
           text: 'Startup',
@@ -24,7 +24,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Pages',
+      text: 'Outreach',
       links: [
         {
           text: 'Features (Anchor Link)',
@@ -57,7 +57,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Landing',
+      text: 'Activties',
       links: [
         {
           text: 'Lead Generation',
@@ -86,7 +86,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Blog',
+      text: 'News',
       links: [
         {
           text: 'Blog List',
@@ -111,7 +111,15 @@ export const headerData = {
       ],
     },
     {
-      text: 'Widgets',
+      text: 'Preschool',
+      href: '#',
+    },
+    {
+      text: 'About',
+      href: '#',
+    },
+    {
+      text: 'Contact',
       href: '#',
     },
   ],

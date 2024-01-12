@@ -11,6 +11,8 @@ import icon from 'astro-icon';
 import tasks from './src/utils/tasks';
 import { defineConfig } from "astro/config";
 import storyblok from "@storyblok/astro";
+import { loadEnv } from 'vite';
+const env = loadEnv("", process.cwd(), 'STORYBLOK');
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 
@@ -31,10 +33,15 @@ export default defineConfig({
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
   output: 'static',
-
   integrations: [
     storyblok({
-      accessToken: "A160lQNgTpc96XQlQ3y0vgtt",
+      accessToken: env.STORYBLOK_TOKEN,
+      components: {
+        page: 'pages/homes/worship',
+        feature: 'storyblok/Feature',
+        grid: 'storyblok/Grid',
+        teaser: 'storyblok/Teaser',
+      },
     }),
     tailwind({
       applyBaseStyles: false,
