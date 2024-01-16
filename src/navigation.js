@@ -6,7 +6,7 @@ export const headerData = {
       text: 'Worship',
       links: [
         {
-          text: 'Subnday Worship',
+          text: 'Sunday Worship',
           href: getPermalink('/homes/worship'),
         },
         {
@@ -116,14 +116,13 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: '#',
+      href: getPermalink('/about'), 
     },
     {
       text: 'Contact',
-      href: '#',
+      href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {

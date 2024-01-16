@@ -37,10 +37,15 @@ export default defineConfig({
     storyblok({
       accessToken: env.STORYBLOK_TOKEN,
       components: {
-        page: 'pages/homes/worship',
+        page: 'storyblok/Page',
+        blogPost: 'storyblok/BlogPost',
         feature: 'storyblok/Feature',
         grid: 'storyblok/Grid',
         teaser: 'storyblok/Teaser',
+      },
+      apiOptions: {
+        // Choose your Storyblok space region
+        region: 'us', // optional,  or 'eu' (default)
       },
     }),
     tailwind({
