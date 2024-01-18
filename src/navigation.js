@@ -10,15 +10,15 @@ export const headerData = {
           href: getPermalink('/homes/worship'),
         },
         {
-          text: 'Startup',
+          text: 'Sunday School',
           href: getPermalink('/homes/startup'),
         },
         {
-          text: 'Mobile App',
+          text: 'Music',
           href: getPermalink('/homes/mobile-app'),
         },
         {
-          text: 'Personal',
+          text: 'Youth',
           href: getPermalink('/homes/personal'),
         },
       ],
@@ -60,7 +60,7 @@ export const headerData = {
       text: 'Activties',
       links: [
         {
-          text: 'Lead Generation',
+          text: 'Events',
           href: getPermalink('/landing/lead-generation'),
         },
         {
@@ -89,15 +89,15 @@ export const headerData = {
       text: 'News',
       links: [
         {
-          text: 'Blog List',
+          text: 'Upcoming Events',
           href: getBlogPermalink(),
         },
         {
-          text: 'Article',
+          text: 'Pastor\'s Notes',
           href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
         },
         {
-          text: 'Article (with MDX)',
+          text: 'Sermons',
           href: getPermalink('markdown-elements-demo-post', 'post'),
         },
         {
@@ -112,11 +112,53 @@ export const headerData = {
     },
     {
       text: 'Preschool',
-      href: '#',
+      links: [
+        {
+          text: 'Events',
+          href: getBlogPermalink(),
+        },
+        {
+          text: 'About',
+          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        },
+        {
+          text: 'Registration',
+          href: getPermalink('markdown-elements-demo-post', 'post'),
+        },
+        {
+          text: 'Rules',
+          href: getPermalink('tutorials', 'category'),
+        },
+        {
+          text: 'Budget',
+          href: getPermalink('astro', 'tag'),
+        },
+      ],
     },
     {
       text: 'About',
-      href: getPermalink('/about'), 
+      links: [
+        {
+          text: 'History',
+          href: getBlogPermalink(),
+        },
+        {
+          text: 'Cemetary',
+          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        },
+        {
+          text: 'UCC',
+          href: getPermalink('markdown-elements-demo-post', 'post'),
+        },
+        {
+          text: 'Governance',
+          href: getPermalink('tutorials', 'category'),
+        },
+        {
+          text: 'Budget',
+          href: getPermalink('astro', 'tag'),
+        },
+      ],
     },
     {
       text: 'Contact',
