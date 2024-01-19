@@ -7,7 +7,7 @@ export const headerData = {
       links: [
         {
           text: 'Sunday Worship',
-          href: getPermalink('/homes/worship'),
+          href: getPermalink('/worship/worship'),
         },
         {
           text: 'Sunday School',
@@ -57,7 +57,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Activties',
+      text: 'Activities',
       links: [
         {
           text: 'Events',
