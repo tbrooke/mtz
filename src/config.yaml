@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 'Mt Zion China Grove'
+    default: 'Mount Zion China Grove'
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Mount Zion UCC, China Grove, NC"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: 'Mt Zion Chin Grove'
+    site_name: 'Mount Zion China Grove'
     images:
       - url: '~/assets/images/default.png'
         width: 1200
