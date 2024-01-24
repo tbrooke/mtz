@@ -74,6 +74,7 @@ const {
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
+                <div id="item1" "class carousel-item relative full"></div> 
                 <Image
                   class="mx-auto rounded-md w-full"
                   widths={[400, 768, 1024, 2040]}
@@ -83,6 +84,7 @@ const {
                   height={576}
                   {...image}
                 />
+                </div>
               )}
                 <div class="flex justify-center w-full">
                     <a href="#item1" class="btn mx-4 rounded-full btn-tiny">1</a> 
