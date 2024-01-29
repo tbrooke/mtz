@@ -1,5 +1,5 @@
 site:
-  name: 'Mt. Zion China Grove'
+  name: 'Mount Zion China Grove'
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false

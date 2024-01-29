@@ -2,8 +2,9 @@
 ---
 import Image from '~/components/common/Image.astro';
 import type { CallToAction } from '~/types';
-
+<!-- import {Carousel} from "@material-tailwind/react"; -->
 export interface Props {
+
   id?: string;
   title?: string;
   subtitle?: string;
@@ -12,7 +13,6 @@ export interface Props {
   actions?: string | CallToAction[];
   image?: string | any; // TODO: find HTMLElementProps
 }
-
 const {
   id,
   title = await Astro.slots.render('title'),
@@ -24,163 +24,6 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-2 md:py-10">
-      <div class="text-center pb-1 md:pb-1 max-w-5xl mx-auto">
-        {
-          tagline && (
-            <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
-              set:html={tagline}
-            />
-          )
-        }
-        {
-          title && (
-            <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-1 font-heading dark:text-gray-200"
-              set:html={title}
-            />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          {
-            actions && (
-              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-                {Array.isArray(actions) ? (
-                  actions.map((action) => (
-                    <div class="flex w-full sm:w-auto">
-                      <Button {...(action || {})} class="w-full sm:mb-0" />
-                    </div>
-                  ))
-                ) : (
-                  <Fragment set:html={actions} />
-                )}
-              </div>
-            )
-          }
-        </div>
-        {content && <Fragment set:html={content} />}
-      </div>
-      <div class="carousel w-full">
-        <div id="item1" class="carousel-item relative w-full">
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <div id="item1" "class carousel-item relative full"></div> 
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-                </div>
-              )}
-                <div class="flex justify-center w-full">
-                    <a href="#item1" class="btn mx-4 rounded-full btn-tiny">1</a> 
-                    <a href="#item2" class="btn mx-4 rounded-full btn-tiny">2</a> 
-                    <a href="#item3" class="btn mx-4 rounded-full btn-tiny">3</a> 
-                    <a href="#item4" class="btn mx-4 btn-tiny">4</a>
-                  </div>
-            </div>
-
-          )
-        }
-      </div>
-        <div id="item2" class="carousel-item relative w-full">
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-                <div class="flex justify-center w-full py-2 gap-2">
-                    <a href="#item1" class="btn mx-4 rounded-full btn-tiny">1</a> 
-                    <a href="#item2" class="btn mx-4 rounded-full btn-tiny">2</a> 
-                    <a href="#item3" class="btn mx-4 rounded-full btn-tiny">3</a> 
-                    <a href="#item4" class="btn mx-4 rounded-full btn-tiny">4</a>
-                  </div>
-            </div>
-
-          )
-        }
-      </div>
-        <div id="item3" class="carousel-item relative w-full">
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-                <div class="flex justify-center w-full py-2 gap-2">
-                    <a href="#item1" class="btn mx-4 rounded-full btn-tiny">1</a> 
-                    <a href="#item2" class="btn mx-4 rounded-full btn-tiny">2</a> 
-                    <a href="#item3" class="btn mx-4 rounded-full btn-tiny">3</a> 
-                    <a href="#item4" class="btn mx-4 rounded-full btn-tiny">4</a>
-                  </div>
-            </div>
-
-          )
-        }
-      </div>
-        <div id="item4" class="carousel-item relative w-full">
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-                <div class="flex justify-center w-full py-2 gap-2">
-                    <a href="#item1" class="btn mx-4 rounded-full btn-tiny">1</a> 
-                    <a href="#item2" class="btn mx-4 rounded-full btn-tiny">2</a> 
-                    <a href="#item3" class="btn mx-4 rounded-full btn-tiny">3</a> 
-                    <a href="#item4" class="btn mx-4 rounded-full btn-tiny">4</a>
-                  </div>
-            </div>
-
-          )
-        }
-      </div>
-    </div>
-  </div>
+<section>
+  <Carousel client:load />
 </section>
