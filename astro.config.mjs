@@ -3,6 +3,9 @@ import { fileURLToPath } from 'url';
 
 import { defineConfig, squooshImageService } from 'astro/config';
 
+import { defineConfig } from 'astro/config';
+import netlify from '@astrojs/netlify';
+
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
@@ -33,7 +36,8 @@ export default defineConfig({
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
-  output: 'static',
+  output: 'server',
+  adapter: netlify(),
   integrations: [
     storyblok({
       accessToken: env.STORYBLOK_TOKEN,

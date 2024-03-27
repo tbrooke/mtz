@@ -64,15 +64,15 @@ export const headerData = {
           href: getPermalink('/landing/lead-generation'),
         },
         {
-          text: 'Long-form Sales',
+          text: 'Pickle Ball',
           href: getPermalink('/landing/sales'),
         },
         {
-          text: 'Click-Through',
+          text: 'Youth',
           href: getPermalink('/landing/click-through'),
         },
         {
-          text: 'Product Details (or Services)',
+          text: 'Preschool',
           href: getPermalink('/landing/product'),
         },
         {
@@ -94,7 +94,7 @@ export const headerData = {
         },
         {
           text: 'Pastor\'s Notes',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          href: getBlogPermalink(),
         },
         {
           text: 'Sermons',

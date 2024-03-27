@@ -1,6 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
+import { useStoryblokApi } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
 import Hero from '~/components/widgets/Hero.astro';
 import Carousel from '~/components/widgets/Carousel.astro';
 import Note from '~/components/widgets/Note.astro';
@@ -13,6 +16,12 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get('cdn/stories/home', {
+  version: 'draft',
+})
+ 
+const story = data.story
 const metadata = {
   title: 'Mount Zion United Church of Christ China Grove, North Carolina',
   ignoreTitleTemplate: true,
