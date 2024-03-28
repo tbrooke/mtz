@@ -15,7 +15,7 @@ import tasks from './src/utils/tasks';
 import { defineConfig } from "astro/config";
 import storyblok from "@storyblok/astro";
 import { loadEnv } from 'vite';
-const env = fetch(`${import.meta.env.STORYBLOK_TOKEN}'
+const env = fetch(`${import.meta.env.STORYBLOK_TOKEN}';
 
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
