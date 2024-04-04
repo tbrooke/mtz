@@ -15,6 +15,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { registerStoryblokBridge } from '@storyblok/js';
 
 const storyblokApi = useStoryblokApi()
 const { data } = await storyblokApi.get('cdn/stories/home', {
@@ -41,10 +42,13 @@ const metadata = {
       Mount Zion United Church of Christ <span class="hidden xl:inline"></span><br>
       <span class="text-accent dark:text-white highlight"> China Grove, NC </span>
     </Fragment>
+    
+    <StoryblokComponent blok="{story.content}" />
 
     <Fragment slot="subtitle">
        We are a family oriented church located in China Grove. If you’re looking for a place to call home, please come join us one Sunday morning or at one of our community events.  Maybe you’ll find that Mount Zion is the family you’ve been looking for.
     </Fragment>
+    
   </Hero>
 
   <Features

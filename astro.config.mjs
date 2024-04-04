@@ -15,7 +15,7 @@ import tasks from './src/utils/tasks';
 import { defineConfig } from "astro/config";
 import storyblok from "@storyblok/astro";
 import { loadEnv } from 'vite';
-const env = fetch(`${import.meta.env.STORYBLOK_TOKEN})';
+const env = loadEnv("", process.cwd(), 'STORYBLOK');
 
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
@@ -36,7 +36,7 @@ export default defineConfig({
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
-  output: 'static',
+  output: 'server',
   adapter: netlify(),
   integrations: [
     storyblok({
