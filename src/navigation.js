@@ -27,28 +27,20 @@ export const headerData = {
       text: 'Outreach',
       links: [
         {
-          text: 'Features (Anchor Link)',
+          text: 'One Child One Church',
           href: getPermalink('/#features'),
         },
         {
-          text: 'Services',
+          text: 'Main Street Marketplace',
           href: getPermalink('/services'),
         },
         {
-          text: 'Pricing',
+          text: 'Meals on Wheels',
           href: getPermalink('/pricing'),
         },
         {
-          text: 'About us',
+          text: 'New Americans Progam',
           href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
         },
         {
           text: 'Privacy policy',
@@ -149,6 +141,10 @@ export const headerData = {
         {
           text: 'Budget',
           href: getPermalink('astro', 'tag'),
+        },
+        {
+          text: 'Privacy policy',
+          href: getPermalink('/privacy'),
         },
       ],
     },
