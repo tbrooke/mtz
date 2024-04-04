@@ -60,7 +60,7 @@ export const headerData = {
       text: 'Activties',
       links: [
         {
-          text: 'Events',
+          text: 'Church Wide Events',
           href: getPermalink('/landing/lead-generation'),
         },
         {
@@ -68,20 +68,12 @@ export const headerData = {
           href: getPermalink('/landing/sales'),
         },
         {
-          text: 'Youth',
+          text: 'Youth Events',
           href: getPermalink('/landing/click-through'),
         },
         {
-          text: 'Preschool',
+          text: 'Preschool Events',
           href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
         },
       ],
     },
@@ -89,7 +81,7 @@ export const headerData = {
       text: 'News',
       links: [
         {
-          text: 'Upcoming Events',
+          text: 'News and Events',
           href: getBlogPermalink(),
         },
         {
