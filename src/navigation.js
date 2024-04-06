@@ -132,11 +132,11 @@ export const headerData = {
         },
         {
           text: 'UCC',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          href: 'https://ucc.org',
         },
         {
-          text: 'Governance',
-          href: getPermalink('tutorials', 'category'),
+          text: 'UCC Western Association',
+          href: 'https://wnca-soc.org/',
         },
         {
           text: 'Budget',
