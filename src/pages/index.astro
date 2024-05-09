@@ -4,7 +4,6 @@ import { useStoryblokApi } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Hero from '~/components/widgets/Hero.astro';
-import Carousel from '~/components/widgets/Carousel.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -15,21 +14,26 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { registerStoryblokBridge } from '@storyblok/js';
-
+import 'blaze-slider/dist/blaze.css';
+import '~/assets/styles/slide.css';
 const metadata = {
   title: 'Mount Zion United Church of Christ China Grove, North Carolina',
   ignoreTitleTemplate: true,
 };
----
 
+---
 <Layout metadata={metadata}>
+
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    
-    image={{ src: 'https://a-us.storyblok.com/f/1017237/1024x576/5ad3562691/buildingc.png',
-             alt: 'Building on Faith' }}
-  >
+
+  <Hero>
+
+
+  image={{ src: 'https://a-us.storyblok.com/f/1017237/1024x576/5ad3562691/buildingc.png',
+             alt: 'Building on Faith' }} 
+  
+
     <Fragment slot="title">
       Mount Zion United Church of Christ <span class="hidden xl:inline"></span><br>
       <span class="text-accent dark:text-white highlight"> China Grove, NC </span>
@@ -38,6 +42,37 @@ const metadata = {
 
     <Fragment slot="subtitle">
        We are a family oriented church located in China Grove. If you’re looking for a place to call home, please come join us one Sunday morning or at one of our community events.  Maybe you’ll find that Mount Zion is the family you’ve been looking for.
+    </Fragment>
+    <Fragment slot="content">
+
+      <script>
+         import BlazeSlider from "blaze-slider"
+         import 'blaze-slider/dist/blaze.css';
+         const el = document.querySelector('.blaze-slider');
+         import '~/assets/styles/slide.css';
+         new BlazeSlider(el)
+      </script>
+
+
+      <div class="blaze-slider">
+        <div class="blaze-container">
+          <div class="blaze-track-container">
+            <div class="blaze-track">
+              <div><img src='https://a-us.storyblok.com/f/1017237/1024x576/5ad3562691/buildingc.png'></div>
+              <div><img src='https://a-us.storyblok.com/f/1017237/452x254/f39b9b2910/reject.jpeg'></div>
+              <div><img src='https://a-us.storyblok.com/f/1017237/891x576/f9d6f3558c/vbs2.jpg'></div>
+              <div><img src='https://a-us.storyblok.com/f/1017237/1080x720/e131a267fe/pulpit.jpeg'></div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="blaze-prev">prev</button>
+            <div class="blaze-pagination"></div>
+            <button class="blaze-next">next</button>
+          </div>
+        </div>
+      </div>
+
     </Fragment>
     
   </Hero>
@@ -87,6 +122,7 @@ const metadata = {
     ]}
   />
 
+
   <!-- Content Widget **************** -->
 
-</Layout>
+</Layout> -->
