@@ -20,7 +20,6 @@ const metadata = {
   title: 'Mount Zion United Church of Christ China Grove, North Carolina',
   ignoreTitleTemplate: true,
 };
-
 ---
 <Layout metadata={metadata}>
 
@@ -50,7 +49,17 @@ const metadata = {
          import 'blaze-slider/dist/blaze.css';
          const el = document.querySelector('.blaze-slider');
          import '~/assets/styles/slide.css';
-         new BlazeSlider(el)
+         new BlazeSlider(el,{
+             all: {
+                  enableAutoplay: true,
+                  autoplayInterval: 2000,
+                  transitionDuration: 300,
+                   slidesToShow: 1,
+                   },
+                    '(max-width: 1600px)': {
+                    slidesToShow: 1,
+                   },
+                  })
       </script>
 
 
@@ -58,9 +67,10 @@ const metadata = {
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">
-              <div><img src='https://a-us.storyblok.com/f/1017237/1024x576/5ad3562691/buildingc.png'></div>
-              <div><img src='https://a-us.storyblok.com/f/1017237/1026x577/3d0d850c0c/vbs.png'></div>
-              <div><img src='https://a-us.storyblok.com/f/1017237/1080x720/e131a267fe/pulpit.jpeg'></div>
+              <div><img src='https://a-us.storyblok.com/f/1017237/1632x1056/d7f16bf4bd/buildingcl.png'></div>
+              <div><img src='https://a-us.storyblok.com/f/1017237/1632x1056/dedaca5568/vbs2.png'></div>
+              <div><img src='https://a-us.storyblok.com/f/1017237/1632x1056/ceb0ca62d3/car-3.jpg'></div>
+              <div><img src='https://a-us.storyblok.com/f/1017237/1632x1056/9a4b6feb51/outdoor-large.jpg'></div>
             </div>
           </div>
 
@@ -85,31 +95,31 @@ const metadata = {
       {
         title: 'Worship',
         description:
-          'If you’re looking for a church to call your family, we hope you will check Mount Zion out. ',
+          'If you’re looking for a church to call your family, we hope you will check Mount Zion out.',
         icon: 'tabler:building-church',
       },
       {
         title: 'Preschool',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'We have an active preschool program for 2 3 and 4 year olds',
         icon: 'tabler:cross',
       },
       {
         title: 'Comments from Pastor Jim',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'May God teach all of us to be good sheep. May MTZ be a flock of people who know what it means to let the Good Shepherd help us. Heal us. Make us whole.',
         icon: 'tabler:bible',
       },
       {
         title: 'Coming Events',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Outdoor Worship - June 2, VBS - June 20 - 24',
         icon: 'tabler:calendar',
       },
       {
         title: 'Outreach',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          "We support numerous organziations and event in our community",
         icon: 'tabler:bible',
       },
       {
@@ -120,8 +130,5 @@ const metadata = {
       },
     ]}
   />
-
-
-  <!-- Content Widget **************** -->
 
 </Layout> -->

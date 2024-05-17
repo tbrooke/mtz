@@ -1,0 +1,43 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'VBS',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Vacation Bible School at Mt. Zion"
+    subtitle=" Make plans to join us for Camp Firelight, a Summer Camp Adventure with God! This year's Vacation Bible School will take place Sunday, June 9 through Tuesday, June 11 with dinner from 5:30-6:00 and our VBS activities from 6:00-8:00. All are welcome and be sure  invite your friends and family!"
+    actions={[
+      { variant: 'primary', text: 'Click here to Sign Up', href: 'https://docs.google.com/forms/d/1q9b3JoGOePOCA0LDSrYMg_3OTzzO4uC-4f9nseVasUM/viewform?ts=65edd6f1&edit_requested=true', icon: 'tabler:square-rounded-arrow-right' },
+    ]}
+    image={{
+      src: 'https://a-us.storyblok.com/f/1017237/1632x1056/68802ab6ba/vbs3.png',
+      alt: 'Camp Firelight',
+    }}
+  />
+  <CallToAction
+  title="Get in Touch"
+  subtitle="Contact us to Learn more about Mt. Zion"
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Contact Us',
+      href: '/contact',
+      icon: 'tabler:download',
+    },
+  ]}
+/>
+
+
+
+
+</Layout>

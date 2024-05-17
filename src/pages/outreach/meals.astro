@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Meals on Wheels',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{
+    src: 'https://a-us.storyblok.com/f/1017237/1137x293/9ffd4a2f6d/mow-rowan-logo.png',
+    alt: 'Meals on Wheels',}}
+    min-width=900px
+    tagline=""
+    title="Meals on Wheels"
+    subtitle="Mt. Zion works closely with Meals on Wheels Rowan"
+  >
+<fragment slot="content">
+  Rowan One Church One Child (ROCOC) is a partnership between Rowan County Department of Social Services 
+  (RCDSS) and Rowan County churches whose purpose is to ensure healthy, safe and protective outcomes for Rowan County children and teenagers who are victimized and traumatized by sexual, physical, and emotional abuse, neglect, or dependency who are currently receiving Child Protective, In-Home Case Management, Foster Care or Adoption services from the RCDSS Children Services Division. ROCOC’s goal is to keep birth families intact or assist relative caregivers who provide care to children.
+</fragment>
+</Hero>
+
+  <!-- Features2 Widget ************** -->
+
+</Layout>

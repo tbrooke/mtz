@@ -10,6 +10,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { headerData, footerData } from '~/navigation';
 import Headline from '~/components/ui/Headline.astro';
+import { getPermalink, getBlogPermalink, getAsset } from '~/utils/permalinks';
 
 const metadata = {
 
@@ -70,6 +71,7 @@ const metadata = {
       {
         title: `Christ centered Sermons`,
         icon: 'tabler:building-church',
+        href: getPermalink('/homes/sermons'),
       },
       {
         title: `Traditional and contemporary Music`,

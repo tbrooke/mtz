@@ -10,8 +10,8 @@ export const headerData = {
           href: getPermalink('/worship/worship'),
         },
         {
-          text: 'Sunday School',
-          href: getPermalink('/homes/startup'),
+          text: 'Sermons',
+          href: getPermalink('/homes/sermons'),
         },
         {
           text: 'Music',
@@ -28,7 +28,7 @@ export const headerData = {
       links: [
         {
           text: 'One Child One Church',
-          href: getPermalink('/#features'),
+          href: getPermalink('/outreach/onechild'),
         },
         {
           text: 'Main Street Marketplace',
@@ -36,7 +36,7 @@ export const headerData = {
         },
         {
           text: 'Meals on Wheels',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/outreach/meals'),
         },
         {
           text: 'New Americans Progam',
@@ -49,7 +49,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Activties',
+      text: 'Activities',
       links: [
         {
           text: 'Church Wide Events',
@@ -74,19 +74,19 @@ export const headerData = {
       links: [
         {
           text: 'News and Events',
-          href: getBlogPermalink(),
+          href: getPermalink('events', 'category'),
         },
         {
-          text: 'Pastor\'s Notes',
-          href: getBlogPermalink(),
+          text: 'Pastor Jim Reflects',
+          href: getPermalink('pastor-jim-reflects', 'category'),
         },
         {
           text: 'Sermons',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          href: getPermalink('/homes/sermons'),
         },
         {
           text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
+          href: getPermalink('vbs', 'category'),
         },
         {
           text: 'Tag Page',
