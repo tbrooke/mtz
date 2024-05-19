@@ -42,10 +42,6 @@ export const headerData = {
           text: 'New Americans Progam',
           href: getPermalink('/about'),
         },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
       ],
     },
     {
@@ -53,7 +49,7 @@ export const headerData = {
       links: [
         {
           text: 'Church Wide Events',
-          href: getPermalink('/landing/lead-generation'),
+          href: getPermalink('events', 'category'),
         },
         {
           text: 'Pickle Ball',
@@ -74,7 +70,7 @@ export const headerData = {
       links: [
         {
           text: 'News and Events',
-          href: getPermalink('events', 'category'),
+          href: getBlogPermalink(),
         },
         {
           text: 'Pastor Jim Reflects',
@@ -98,8 +94,8 @@ export const headerData = {
       text: 'Preschool',
       links: [
         {
-          text: 'Events',
-          href: getBlogPermalink(),
+          text: 'Calendar',
+          href: getPermalink('preschool-calendar', 'category'),
         },
         {
           text: 'About',
@@ -127,15 +123,11 @@ export const headerData = {
           href: getBlogPermalink(),
         },
         {
-          text: 'Cemetary',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'UCC',
+          text: 'Governance',
           href: 'https://ucc.org',
         },
         {
-          text: 'UCC Western Association',
+          text: 'Donate',
           href: 'https://wnca-soc.org/',
         },
         {
