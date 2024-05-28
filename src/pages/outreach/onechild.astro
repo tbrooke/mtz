@@ -18,11 +18,12 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
+  <Hero 
     image={{
-    src: 'https://a-us.storyblok.com/f/1017237/840x440/2373f4cfae/onechild2.png',
-    alt: 'One Church One Child',}}
-    min-width='900px'
+    src: 'https://a-us.storyblok.com/f/1017237/640x163/a7ea593c3b/onechild.png',
+    alt: 'One Church One Child',
+    width: 640,
+    height: 163 }}
     tagline=""
     title="One Church One Child"
     subtitle="Mt. Zion works closely with One Church One Child"
@@ -33,6 +34,15 @@ const metadata = {
 </fragment>
 </Hero>
 
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Visit One Church One Child',
+        href: 'https://www.rowancountync.gov/830/One-Church-One-Child',
+      },
+    ]}
+  />
   <!-- Features2 Widget ************** -->
 
 </Layout>

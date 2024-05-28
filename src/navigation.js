@@ -32,7 +32,7 @@ export const headerData = {
         },
         {
           text: 'Main Street Marketplace',
-          href: getPermalink('/services'),
+          href: getPermalink('/outreach/msm'),
         },
         {
           text: 'Meals on Wheels',
