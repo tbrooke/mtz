@@ -1,0 +1,96 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { headerData, footerData } from '~/navigation';
+import Headline from '~/components/ui/Headline.astro';
+import { getPermalink, getBlogPermalink, getAsset } from '~/utils/permalinks';
+
+const metadata = {
+
+  title: 'Youth Ministry at Mt Zion',
+};
+---
+
+<Layout metadata={metadata}>
+  
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Youth Ministry at Mt Zion"
+    actions={[{ variant: "primary", target: '_blank', text: 'Join Us', href: '/contact' }]}
+  >
+    <Fragment slot="subtitle">
+      Sunday worship starts at 10:30 Every Sunday. 
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    image={{
+      src: 'https://a-us.storyblok.com/f/1017237/1080x720/e131a267fe/pulpit.jpeg',
+      alt: 'Building on Faith',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About us</h3>
+      <p>
+        If you’re looking for a church to call your family, we hope you will check Mount Zion out. 
+        We have a comprehensive Youth Ministry lead by Nikki Franz. We have frequent Children’s Sermons
+        and of course we have our preschool.
+      </p>
+      <br />
+      <p>
+        Our pastor, James Simonds shares Christ-centered, bible-based sermons grounded on God’s grace and mercy. 
+         He has a rich background in pastoral ministry and teaching music in public schools.        
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Steps
+    id="resume"
+    title="Our Sunday Service"
+    items={[
+      {
+        title: `Christ centered Sermons`,
+        icon: 'tabler:building-church',
+        href: getPermalink('/homes/sermons'),
+      },
+      {
+        title: `Traditional and contemporary Music`,
+        icon: 'tabler:building-church',
+      },
+      {
+        title: "Children's Time",
+        icon: 'tabler:building-church',
+      },
+
+
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+
+  <!-- Content Widget **************** -->
+
+  <!-- Testimonials Widget *********** -->
+
+
+  <!-- BlogLatestPost Widget **************** -->
+
+</Layout>

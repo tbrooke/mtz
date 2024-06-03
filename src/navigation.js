@@ -11,15 +11,15 @@ export const headerData = {
         },
         {
           text: 'Sermons',
-          href: getPermalink('/homes/sermons'),
+          href: getPermalink('/worship/sermons'),
         },
         {
           text: 'Music',
-          href: getPermalink('/homes/mobile-app'),
+          href: getPermalink('/worship/music'),
         },
         {
           text: 'Youth',
-          href: getPermalink('/homes/personal'),
+          href: getPermalink('/worship/youth'),
         },
       ],
     },
@@ -78,15 +78,7 @@ export const headerData = {
         },
         {
           text: 'Sermons',
-          href: getPermalink('/homes/sermons'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('vbs', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
+          href: getPermalink('/worship/sermons'),
         },
       ],
     },
@@ -95,7 +87,7 @@ export const headerData = {
       links: [
         {
           text: 'Calendar',
-          href: getPermalink('preschool-calendar', 'category'),
+          href: getPermalink('preschool/calendar', 'post'),
         },
         {
           text: 'About',
@@ -103,11 +95,11 @@ export const headerData = {
         },
         {
           text: 'Registration',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          href: getPermalink('preschool/handbook', 'post'),
         },
         {
-          text: 'Rules',
-          href: getPermalink('tutorials', 'category'),
+          text: 'Rules and Guidelines',
+          href: getPermalink('preschool/handbook', 'post'),
         },
         {
           text: 'Budget',
