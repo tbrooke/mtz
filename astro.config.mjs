@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url';
 import { defineConfig, squooshImageService } from 'astro/config';
 
 import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify';
 
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
@@ -13,7 +12,6 @@ import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks';
 import { defineConfig } from "astro/config";
-import storyblok from "@storyblok/astro";
 import { loadEnv } from 'vite';
 
 const env = loadEnv("", process.cwd(), 'STORYBLOK');
@@ -38,22 +36,7 @@ export default defineConfig({
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
   output: 'static',
-  adapter: netlify(),
   integrations: [
-    storyblok({
-      accessToken: env.STORYBLOK_TOKEN,
-      components: {
-        page: 'storyblok/Page',
-        blogPost: 'storyblok/BlogPost',
-        feature: 'storyblok/Feature',
-        grid: 'storyblok/Grid',
-        teaser: 'storyblok/Teaser',
-      },
-      apiOptions: {
-        // Choose your Storyblok space region
-        region: 'us', // optional,  or 'eu' (default)
-      },
-    }),
     tailwind({
       applyBaseStyles: false,
     }),
