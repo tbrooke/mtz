@@ -90,20 +90,12 @@ export const headerData = {
           href: getPermalink('preschool/calendar', 'post'),
         },
         {
-          text: 'About',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
           text: 'Registration',
           href: getPermalink('preschool/handbook', 'post'),
         },
         {
           text: 'Rules and Guidelines',
           href: getPermalink('preschool/handbook', 'post'),
-        },
-        {
-          text: 'Budget',
-          href: getPermalink('astro', 'tag'),
         },
       ],
     },
