@@ -112,7 +112,7 @@ export const headerData = {
         },
         {
           text: 'Donate',
-          href: 'https://wnca-soc.org/',
+          href: 'https://secure.myvanco.com/L-Z51Z/home',
         },
         {
           text: 'Budget',

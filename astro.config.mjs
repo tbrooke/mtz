@@ -45,6 +45,7 @@ export default defineConfig({
       components: {
         page: 'storyblok/Page',
         blogPost: 'storyblok/BlogPost',
+        blogPostlist: 'storyblok/BlogPostlist',
         feature: 'storyblok/Feature',
         grid: 'storyblok/Grid',
         teaser: 'storyblok/Teaser',
