@@ -41,7 +41,7 @@ export default defineConfig({
   adapter: netlify(),
   integrations: [
     storyblok({
-      accessToken: env.STORYBLOK_TOKEN,
+      accessToken: 'A160lQNgTpc96XQlQ3y0vgtt',
       components: {
         page: 'storyblok/Page',
         blogPost: 'storyblok/BlogPost',
