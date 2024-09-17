@@ -80,11 +80,19 @@ export const headerData = {
           text: 'Sermons',
           href: getPermalink('/worship/sermons'),
         },
+        {
+          text: 'Preschool News',
+          href: getPermalink('preschool-news', 'category'),
+        },
       ],
     },
     {
       text: 'Preschool',
       links: [
+        {
+          text: 'Preschool News',
+          href: getPermalink('preschool-news', 'category'),
+        },
         {
           text: 'Calendar',
           href: getPermalink('preschool/calendar', 'post'),
