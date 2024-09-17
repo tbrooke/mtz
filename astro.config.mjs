@@ -2,7 +2,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 import { defineConfig, squooshImageService } from 'astro/config';
-
+import { load } from 'cheerio';
 import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
 
